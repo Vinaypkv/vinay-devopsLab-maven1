@@ -23,15 +23,18 @@ pipeline {
                 }
             }
             stage ('CI Build') {
-
-                steps {
+                withCredentials([gitUsernamePassword(credentialsId: 'GITPWD', gitToolName: 'Default')]) {
+                 
+                 steps {
                     dir('vinay-devopsLab-maven1') {
 
                         sh 'mvn clean package'
 
                     }
 
-                     }
+                     }    
+            }
+               
     
             }
 
