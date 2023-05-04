@@ -26,11 +26,11 @@ pipeline {
 
                 steps {
                     dir('vinay-devopsLab-maven1') {
+
                         sh 'mvn clean package'
+
                     }
-                    
-                    
-                   
+
                      }
     
             }
@@ -44,3 +44,4 @@ pipeline {
 
             }
     }
+}
