@@ -26,6 +26,7 @@ pipeline {
 
                 steps {
 
+                    sh 'cd vinay-devopsLab-maven1'
                     sh 'mvn clean package'
                    
                      }
