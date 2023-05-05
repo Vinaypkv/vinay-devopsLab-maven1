@@ -28,7 +28,7 @@ pipeline {
                     
                         sh 'ls -l'
                         sh 'rm -rf vinay-devopsLab-maven1'
-                        sh 'cd vinay-devopsLab-maven1'
+                        sh 'pwd'
                         sh 'mvn clean package'
 
                     
