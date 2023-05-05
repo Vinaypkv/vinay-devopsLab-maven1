@@ -25,11 +25,11 @@ pipeline {
             stage ('CI Build') {
 
                 steps {
-                    dir('vinay-devopsLab-maven1') {
+                    
 
                         sh 'mvn clean package'
 
-                    }
+                    
 
                      }
     
