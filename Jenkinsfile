@@ -53,6 +53,7 @@ pipeline {
                 }
 
                 }
+             }
 
             stage('Archive and clean workspace') {
                 steps {
