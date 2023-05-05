@@ -45,10 +45,10 @@ pipeline {
     
 
 
-                    sh 'docker build . -t vinaypkvp/app30:lab'
+                    sh 'docker build . -t vinaypkvp/app40:latest'
                     sh 'docker login -u vinaypkvp -p ${DOCKER_PWD}'
-                    sh 'docker push vinaypkvp/app30:lab'
-                    sh 'docker run -p 98:8080 -d vinaypkvp/app30:lab'
+                    sh 'docker push vinaypkvp/app40:latest'
+                    sh 'docker run -p 98:8080 -d vinaypkvp/app40:latest'
                     
                 }
 
