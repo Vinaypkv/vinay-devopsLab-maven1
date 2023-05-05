@@ -35,6 +35,24 @@ pipeline {
     
             }
 
+             stage ('Docker Build && Push && DEPLOY ') {
+               
+
+                steps {
+                    
+                    withCredentials([string(credentialsId: 'DOCKERPWD', variable: 'DOCKER_PWD')]) {
+    
+
+
+                    sh 'docker build . -t vinaypkvp/app30:lab'
+                    sh 'docker login -u vinaypkvp -p ${DOCKER_PWD}'
+                    sh 'docker push vinaypkvp/app30:lab'
+                    sh 'docker run -p 98:8080 -d vinaypkvp/app30:lab'
+                    
+                }
+
+                }
+
             stage('Archive and clean workspace') {
                 steps {
                     
